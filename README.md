@@ -1,7 +1,7 @@
 # Oracle-ERP-to-FTP-Purchase-Order-Automation
 An automated integration solution built using Oracle Integration Cloud (OIC) to synchronize Purchase Orders (PO) from Oracle ERP Cloud to an external vendor FTP server in real-time.
 
-** Overview
+### Overview
 Manual file transfers between procurement systems and vendors often lead to delays and data entry errors. This project automates the entire lifecycle:
 
 Trigger: A Purchase Order is approved and becomes "Open" in Oracle ERP.
@@ -10,7 +10,7 @@ Process: OIC captures the event, transforms the data into a vendor-specific JSON
 
 Delivery: The file is securely uploaded via the FTP Adapter to a specific directory.
 
-** Tech Stack
+### Tech Stack
 Middleware: Oracle Integration Cloud (OIC) Gen 2/3
 
 ERP: Oracle Fusion ERP Cloud
@@ -21,7 +21,7 @@ Data Format: JSON / XML
 
 Tools: Xftp (for verification), OIC Mapper (XSLT)
 
-**📂 Project Structure
+### Project Structure
 Integration: App-driven orchestrated flow.
 
 Connections: * ERP_Cloud_Connection: To subscribe to PO events.
@@ -30,7 +30,7 @@ FTP_Connection: To deliver files to the remote server.
 
 Pathing Configuration: * Target Directory: /home/user1/upload/users/PO
 
-** Setup & Configuration
+### Setup & Configuration
 1. FTP Directory Setup
 Ensure the target directory exists and has the correct permissions (CHMOD 755 or 775):
 
@@ -43,7 +43,7 @@ Set the Output Directory to the absolute path identified in the server configura
 3. Transformation
 Map the ERP Purchase Order Number and Line Items to the target JSON schema using the OIC Data Mapper.
 
-** Demonstration
+### Demonstration
 The workflow follows these steps:
 
 PO Creation: A PO is created in Oracle Cloud.
